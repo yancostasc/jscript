@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Calculadora</title>
+
+<style>
+
+    body, html {
+        height: 100%;
+        margin: 0;
+        font-family: Roboto;
+        background-image: url("https://i.imgur.com/xxPnNWV.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: 20px;
+    }
+
+    /* Cria a "borda" de celular */ 
+    .celular {
+        position: relative;
+        width: 330px;
+        height: 479px;
+        margin: auto;
+        margin-top: 10px;
+        border: 16px rgb(219, 219, 219) solid;
+        border-top-width: 60px;
+        border-bottom-width: 60px;
+        border-radius: 15px;
+    }
+
+    /* Cria a barrinha da parte superior do celular */ 
+    .celular:before {
+        content: '';
+        display: block;
+        width: 70px;
+        height: 15px;
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #141313;
+        border-radius: 10px;
+    }
+
+    /* Cria a bolinha na parte inferior do celular */ 
+    .celular:after {
+        content: '';
+        display: block;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        left: 50%;
+        bottom: -65px;
+        transform: translate(-50%, -50%);
+        background: #141313;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    /* Altera o tamanho do conteúdo dentro da tela */ 
+    .celular .conteudo {
+        width: 330px;
+        height: 640px;
+        background: 100%;
+    }
+
+    .input {
+        height: 4em;
+        width: 9em;
+        border: none;
+        
+        font-size: 30px;
+        font-weight: 700;
+        text-align: right;
+        color:white;
+        padding: 2px 2x;
+        text-decoration: none;
+        margin: 2px 2px;
+        background-color: #221F1F;
+    }
+
+    .button {
+        height: 4em;
+        width: 4em;
+        border-radius: 50%;
+
+        color:white;
+        font-weight: 1000;
+        border: none;
+        margin: -3px 2px;
+        text-decoration: none;
+        cursor: pointer;
+        background-color: #383535;
+        opacity: 0.8;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+
+    .button1 {
+        background-color: #A4C639;
+    }
+
+    .button2 {
+        color:#EA4335;
+    }
+
+    .button3 {
+        color: #A4C639;
+    }
+
+    .button:hover, .button1:hover {
+        opacity: 1;
+    }
+
+    .flexContainer {
+        padding: 0.5em;
+        display: flex;
+        background-color: #221F1F;
+        justify-content: center;
+    }
+
+</style>
+</head>
+<body>
+<div class="celular">
+    <div class="conteudo">
+        <div class="flexContainer">
+            <div>  
+                <input class="input" type="text" name="display" id="display" placeholder="0">
+            </div>
+        </div>
+
+        <div class="flexContainer">
+            <div>
+                <input class="button button2" type="button" value="C" onclick="display('C')"/>
+                <input class="button button3" type="button" value="( )" onclick="display('()')"/>
+                <input class="button button3" type="button" value="%" onclick="display('%')"/> 
+                <input class="button button3" type="button" value="/" onclick="display('/')"/>
+            </div>
+        </div>
+
+        <div class="flexContainer">
+            <div>
+                <input class="button" type="button" value="7" onclick="display('7')"/>
+                <input class="button" type="button" value="8" onclick="display('8')"/>
+                <input class="button" type="button" value="9" onclick="display('9')"/> 
+                <input class="button button3" type="button" value="X" onclick="display('X')"/>
+            </div>
+        </div>
+
+        <div class="flexContainer">
+            <div>
+                <input class="button" type="button" value="4" onclick="display('4')"/>
+                <input class="button" type="button" value="5" onclick="display('5')"/>
+                <input class="button" type="button" value="6" onclick="display('6')"/> 
+                <input class="button button3" type="button" value="-" onclick="display('-')"/>
+            </div>
+        </div>
+
+        <div class="flexContainer">
+            <div>
+                <input class="button" type="button" value="1" onclick="display('1')"/>
+                <input class="button" type="button" value="2" onclick="display('2')"/>
+                <input class="button" type="button" value="3" onclick="display('3')"/> 
+                <input class="button button3" type="button" value="+" onclick="display('+')"/>
+            </div>
+        </div>
+
+        <div class="flexContainer">
+            <div>
+                <input class="button" type="button" value="+/-" onclick="display('+/-')"/>
+                <input class="button" type="button" value="0" onclick="display('0')"/>
+                <input class="button" type="button" value="." onclick="display('.')"/> 
+                <input class="button button1" type="button" value="=" onclick="display('=')"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
